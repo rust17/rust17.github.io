@@ -14,7 +14,7 @@ export function getAllPosts(): Post[] {
     // 从 '../posts/2023/my-first-post.md' 提取 '2023/my-first-post'
     const path = filepath.replace('../posts/', '').replace(/\.(md|markdown)$/, '');
     return { path, frontmatter: data, content };
-  });
+  }).filter(post => !post.frontmatter.hidden);
 
   allPosts = posts;
   return posts;
