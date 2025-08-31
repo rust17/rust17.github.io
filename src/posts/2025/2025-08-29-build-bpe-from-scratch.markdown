@@ -7,6 +7,8 @@ tag:
 - LLM
 - BPE
 - GPT
+- CS336
+- Language Modeling from Scratch
 category: blog
 hidden: false
 author: circle
@@ -267,3 +269,4 @@ BPE 虽然强大，但它只是“子词”分词世界的一员。还有许多�
 
 ### 参考资料：
 - [Stanford CS336 Assignments](https://github.com/DK-Zhu/stanford-cs336-assignments)
+- [CS336: Language Modeling from Scratch](https://stanford-cs336.github.io/spring2024/index.html)
