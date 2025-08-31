@@ -46,7 +46,7 @@ function HomePage() {
       <div className="mt-6 md:mt-8">
         <h2 className="text-xl md:text-2xl font-semibold mb-4">快速导航</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div className="p-3 bg-gray-50 dark:bg-slate-800 rounded-lg">
+          {/* <div className="p-3 bg-gray-50 dark:bg-slate-800 rounded-lg">
             <Link
               to="/introduction"
               className="flex items-center text-blue-600 hover:underline dark:text-blue-400 dark:hover:text-blue-300 min-h-[44px]"
@@ -54,10 +54,10 @@ function HomePage() {
               <span className="mr-2">👋</span>
               <span>关于我</span>
             </Link>
-          </div>
+          </div> */}
           <div className="p-3 bg-gray-50 dark:bg-slate-800 rounded-lg">
             <Link
-              to={`/${posts[1].path}`}
+              to={`/${posts[0].path}`}
               className="flex items-center text-blue-600 hover:underline dark:text-blue-400 dark:hover:text-blue-300 min-h-[44px]"
             >
               <span className="mr-2">📝</span>
