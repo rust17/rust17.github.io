@@ -12,7 +12,7 @@ tag:
 category: blog
 hidden: false
 author: circle
-description: cs336 spring2024 assignment1 basics translate
+description: cs336 spring2024 assignment1 basics
 ---
 
 ### 1. 引言：为什么我们需要分词（Tokenization）？

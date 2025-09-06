@@ -131,10 +131,10 @@ export function buildDirectoryTree(): TreeNode[] {
           return a.name.localeCompare(b.name);
         }
 
-        // 文件之间按日期倒序排列（最新的在前）
+        // 文件之间按日期顺序排列
         const dateA = getPostDate(a);
         const dateB = getPostDate(b);
-        return dateB.getTime() - dateA.getTime();
+        return dateA.getTime() - dateB.getTime();
       })
       .map(node => ({
         ...node,
