@@ -84,7 +84,7 @@ with open(input_path, "r", encoding="utf-8") as f:
                 text = chunk
                 leftover = ''
 
-        chunk_freqs = regex_pretokenize(text, special_tokens)
+        chunk_freqs = regex_pretokenize(text+leftover, special_tokens)
         for token, freqs in chunk_freqs.items():
             pre_token_freqs[token] += freqs
 ```
