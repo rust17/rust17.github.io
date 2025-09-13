@@ -141,7 +141,7 @@ for i in range(num_merges):
     pre_tokens = merge(pre_tokens, top_pair) # 合并
 ```
 
-好了，我们实现了第一个版本，为了演示，这里放出的只是部分代码，完整代码可以在[这里](https://github.com/rust17/assignment1-basics/blob/main/cs336_basics/demo1/bpe_processing.py)查看。
+好了，我们实现了第一个版本，为了演示，这里放出的只是部分代码，完整代码可以在[这里](https://github.com/rust17/assignment1-basics/blob/main/cs336_basics/BPE/demo1/bpe_processing.py)查看。
 
 这段代码有个问题，每一次合并，都会遍历当前文本的所有字节列表，成本是 O(V * L * T)，其中 V 是合并次数，L 是每个单元的长度，T 是所有单元的数量。如果文本很大，这里的成本就高得惊人！
 
@@ -254,7 +254,7 @@ for _ in range(num_merges):
         merge(token, top_pair, pair_freqs, pair_tokens, pre_token_freqs)
 ```
 
-相比于第一版，新的代码更精确了，每一步操作都只针对受影响的部分，而不是对整体做扫描，完整代码地址在[这里](https://github.com/rust17/assignment1-basics/blob/main/cs336_basics/demo2/bpe_processing.py)。
+相比于第一版，新的代码更精确了，每一步操作都只针对受影响的部分，而不是对整体做扫描，完整代码地址在[这里](https://github.com/rust17/assignment1-basics/blob/main/cs336_basics/BPE/demo2/bpe_processing.py)。
 
 让我们来看看这一版算法的复杂度，每轮合并当中，需要
 

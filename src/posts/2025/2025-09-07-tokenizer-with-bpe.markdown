@@ -121,7 +121,7 @@ def encode(text: str) -> list[int]:
     return all_ids
 ```
 
-完整的代码[在这](https://github.com/rust17/assignment1-basics/blob/main/cs336_basics/demo3/tokenizer.py)
+完整的代码[在这](https://github.com/rust17/assignment1-basics/blob/main/cs336_basics/BPE/demo3/tokenizer.py)
 
 ### 模型处理阶段
 

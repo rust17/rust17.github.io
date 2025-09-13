@@ -149,7 +149,7 @@ with multiprocessing.Pool() as pool:
         for token, freqs in chunk_freqs.items():
             pre_token_freqs[token] += freqs
 ```
-完整代码地址在[这里](https://github.com/rust17/assignment1-basics/blob/main/cs336_basics/demo3/bpe_processing.py)。
+完整代码地址在[这里](https://github.com/rust17/assignment1-basics/blob/main/cs336_basics/BPE/demo3/bpe_processing.py)。
 
 ### 总结
 通过分块读取与多进程并行处理，我们成功解决了 BPE 训练中的内存瓶颈问题，并显著提升了处理大规模语料的效率。该方法不仅适用于 BPE 算法，也可推广到其他需要处理大文件的任务中。
