@@ -91,11 +91,14 @@ export const markdownComponents: Components = {
 
   // 图片 - 移动端优化
   img: ({ src, alt }) => (
-    <img
-      src={src}
-      alt={alt}
-      className="max-w-full h-auto rounded-lg shadow-md my-3 md:my-4 mx-auto block"
-      loading="lazy"
-    />
+    <span className="block my-3 md:my-4 text-center">
+      <img
+        src={src}
+        alt={alt}
+        className="max-w-sm md:max-w-4/5 h-auto rounded-lg shadow-md mx-auto block"
+        loading="lazy"
+      />
+      {alt && <span className="block text-sm text-gray-600 dark:text-gray-400 mt-2">{alt}</span>}
+    </span>
   ),
 };
