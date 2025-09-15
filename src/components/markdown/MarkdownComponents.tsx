@@ -1,6 +1,7 @@
 import type { Components } from 'react-markdown';
 import CodeBlock from './CodeBlock';
 import PlainCodeBlock from './PlainCodeBlock';
+import MermaidBlock from './MermaidBlock';
 
 export const markdownComponents: Components = {
   // 标题组件 - 移动端优化
@@ -52,6 +53,11 @@ export const markdownComponents: Components = {
       const match = /language-(\w+)/.exec(className);
       const language = match ? match[1] : 'text';
       const codeContent = String(codeElement.props?.children || '').replace(/\n$/, '');
+
+      // 检查是否是 Mermaid 图表
+      if (language === 'mermaid') {
+        return <MermaidBlock chart={codeContent} />;
+      }
 
       return <CodeBlock language={language} code={codeContent} />;
     }
